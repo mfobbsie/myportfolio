@@ -1,0 +1,90 @@
+/*App.css*/ 
+
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Lexend:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Core colors — light theme */
+  --bg: #f5f2ec;          /* warm off-white */
+  --text: #2a2623;        /* deep brown-grey */
+  --text-muted: #4a4642;  /* softer neutral */
+  --border: #e3dfd7;      /* subtle warm grey */
+  --accent: #bfa58a;      /* soft clay */
+  --accent-bg: #e9e2d8;   /* muted clay wash */
+  --shadow:
+    rgba(0, 0, 0, 0.08) 0 4px 12px;
+  color-scheme: light dark;
+
+  /* Typography */
+  --sans: 'Lexend', system-ui, sans-serif;
+  --heading: 'Sour Gummy', system-ui, sans-serif;
+  --mono: 'Sour Gummy', ui-monospace, monospace;
+
+  font: 18px/150% var(--sans);
+  background: var(--bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] {
+  --bg: #1c1b1a;          /* deep charcoal */
+  --text: #f0ede8;        /* warm beige */
+  --text-muted: #c7c2bb;  /* soft neutral */
+  --border: #2a2928;      /* subtle dark grey */
+  --accent: #a38c72;      /* muted clay/olive */
+  --accent-bg: #2a2724;   /* soft wash */
+  --shadow:
+    rgba(0, 0, 0, 0.5) 0 6px 20px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+.theme-toggle {
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--sans);
+  color: var(--text);
+  transition: background 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+
+
+

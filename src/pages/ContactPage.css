@@ -1,0 +1,102 @@
+/*ContactPage.css*/
+
+/* Page container */
+.contact-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background image */
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.contact-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+  filter: brightness(0.85);
+}
+
+/* Form wrapper */
+.contact-wrapper {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+/* Title */
+.contact-wrapper h1 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Form layout */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form textarea {
+  margin-top: 6px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Submit button */
+.contact-submit {
+  margin-top: 10px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--accent-bg);
+  color: var(--text);
+  font-family: var(--sans);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.contact-submit:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .contact-wrapper {
+    padding: 28px;
+  }
+}
