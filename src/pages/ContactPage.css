@@ -94,6 +94,26 @@
   color: var(--bg);
 }
 
+.contact-success {
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: var(--text);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-error {
+  background: #ffdddd;
+  border: 1px solid #ffb3b3;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #a30000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 /* Mobile adjustments */
 @media (max-width: 600px) {
   .contact-wrapper {

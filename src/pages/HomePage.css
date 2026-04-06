@@ -63,3 +63,16 @@
     margin-right: auto;
   }
 }
+
+.learn-more-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.learn-more-link:hover {
+  color: var(--text);
+}

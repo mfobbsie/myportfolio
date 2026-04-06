@@ -1,25 +1,25 @@
 /*ProjectsPage.tsx*/
 
 import "./ProjectsPage.css";
-import project1 from "../assets/project1.jpg";
+import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.avif";
 import project3 from "../assets/project3.jpg";
 
 export default function ProjectsPage() {
   const projects = [
     {
-      title: "Common Thread Café",
+      title: "Local Artist Website",
       image: project1,
       description:
-        "A warm, community-focused café site featuring interactive menus, responsive layouts, and a soft editorial aesthetic.",
-      tags: ["JavaScript", "CSS", "Responsive Design"],
+        "A custom‑built artist website designed for mr. festin, blending a neon‑editorial aesthetic with responsive layouts, dynamic galleries, and a playful, immersive brand experience.",
+      tags: ["TypeScript", "React", "CSS", "Responsive Design"],
     },
     {
-      title: "Dog Image Generator",
+      title: "Python To‑Do App",
       image: project2,
       description:
-        "A playful React app that fetches random dog images using an API, with clean UI and smooth loading states.",
-      tags: ["React", "APIs", "UI Design"],
+        "A simple but powerful command-line to‑do application built in Python, emphasizing clarity and structure.",
+      tags: ["Python", "CLI", "Data Structures"],
     },
     {
       title: "Python To‑Do App",

@@ -2,6 +2,7 @@
 
 import Profile from "../assets/profile.jpg";
 import "./HomePage.css";
+import {Link} from "react-router-dom";
 
 export default function HomePage() {
   return (
@@ -22,6 +23,10 @@ export default function HomePage() {
             a habit of wandering barefoot through the grass when inspiration
             strikes.
           </p>
+
+          <Link to="/about" className="learn-more-link">
+            Learn more about what I can do for you →
+          </Link>
         </div>
       </div>
     </section>
