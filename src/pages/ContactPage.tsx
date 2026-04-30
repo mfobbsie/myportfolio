@@ -15,20 +15,14 @@ export default function ContactPage() {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch(
-        "https://api.netlify.com/api/v1/forms/contact/submissions",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${import.meta.env.VITE_NETLIFY_TOKEN}`,
-          },
-          body: JSON.stringify({
-            "form-name": "contact",
-            ...data,
-          }),
-        },
-      );
+      const response = await fetch("/api/submit-contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          "form-name": "contact",
+          ...data,
+        }),
+      });
 
       if (!response.ok) throw new Error("Network error");
 
@@ -62,6 +56,9 @@ export default function ContactPage() {
         )}
 
         <form className="contact-form" name="contact" onSubmit={handleSubmit}>
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="bot-field" />
+
           <label>
             Name
             <input type="text" name="name" required />
