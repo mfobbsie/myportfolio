@@ -1,4 +1,4 @@
-/*ContactPage.tsx */
+/* ContactPage.tsx */
 
 import { useState } from "react";
 import "./ContactPage.css";
@@ -12,13 +12,25 @@ export default function ContactPage() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
 
     try {
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString(),
-      });
+      const response = await fetch(
+        "https://api.netlify.com/api/v1/forms/contact/submissions",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${import.meta.env.VITE_NETLIFY_TOKEN}`,
+          },
+          body: JSON.stringify({
+            "form-name": "contact",
+            ...data,
+          }),
+        },
+      );
+
+      if (!response.ok) throw new Error("Network error");
 
       setStatus("success");
       form.reset();
@@ -37,32 +49,19 @@ export default function ContactPage() {
       <div className="contact-wrapper">
         <h1>Contact Me</h1>
 
-        {/* Success Message */}
         {status === "success" && (
           <p className="contact-success">
             Thank you! Your message has been sent.
           </p>
         )}
 
-        {/* Error Message */}
         {status === "error" && (
           <p className="contact-error">
             Something went wrong. Please try again.
           </p>
         )}
 
-        <form
-          className="contact-form"
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
-        >
-          {/* Required hidden fields for Netlify */}
-          <input type="hidden" name="form-name" value="contact" />
-          <input type="hidden" name="bot-field" />
-
+        <form className="contact-form" name="contact" onSubmit={handleSubmit}>
           <label>
             Name
             <input type="text" name="name" required />
