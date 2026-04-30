@@ -1,7 +1,9 @@
-/*ProjectsPage.css*/
+/* ================================
+   PROJECTS PAGE (GRID VIEW)
+   ================================ */
 
 .projects-page {
-  max-width: 1120px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 60px 20px;
 }
@@ -83,9 +85,158 @@
   color: var(--bg);
 }
 
+a.project-btn {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }
 }
+
+/* ================================
+   INDIVIDUAL PROJECT PAGE (FULL VIEW)
+   ================================ */
+
+.project-page {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-hero {
+  margin-bottom: 40px;
+}
+
+.project-video,
+.project-hero img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.project-content h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: var(--text);
+}
+
+.project-content h2 {
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+.project-content ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.project-gallery {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 20px;
+}
+
+.project-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.pending-note {
+  margin-top: 20px;
+  padding: 16px;
+  background: var(--accent-bg);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Thumbnails */
+.gallery-thumb {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery-thumb:hover {
+  transform: scale(1.03);
+}
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.2s ease;
+}
+
+/* Lightbox content */
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* Close button */
+.lightbox-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* Arrows */
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.lightbox-prev {
+  left: -50px;
+}
+
+.lightbox-next {
+  right: -50px;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+

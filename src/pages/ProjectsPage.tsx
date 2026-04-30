@@ -2,8 +2,10 @@
 
 import "./ProjectsPage.css";
 import project1 from "../assets/project1.png";
-import project2 from "../assets/project2.avif";
-import project3 from "../assets/project3.jpg";
+import project2 from "../assets/ptd1.png";
+import project3 from "../assets/project3.png";
+import project4 from "../assets/project2.avif";
+import { Link } from "react-router-dom";
 
 export default function ProjectsPage() {
   const projects = [
@@ -13,20 +15,31 @@ export default function ProjectsPage() {
       description:
         "A custom‑built artist website designed for mr. festin, blending a neon‑editorial aesthetic with responsive layouts, dynamic galleries, and a playful, immersive brand experience.",
       tags: ["TypeScript", "React", "CSS", "Responsive Design"],
+      link: "/mrfestin",
     },
     {
-      title: "Python To‑Do App",
+      title: "Energy‑Based Python To‑Do App",
       image: project2,
       description:
-        "A simple but powerful command-line to‑do application built in Python, emphasizing clarity and structure.",
-      tags: ["Python", "CLI", "Data Structures"],
+        "A smart, human‑centered command‑line productivity tool built in Python. It recommends tasks based on your energy level, available time, and focus, blending clean data modeling with thoughtful user experience.",
+      tags: ["Python", "CLI", "Logic Design", "User‑Centered Systems"],
+      link: "/todoapp",
     },
     {
-      title: "Python To‑Do App",
+      title: "Enhanced TypeScript Task Manager",
       image: project3,
       description:
-        "A simple but powerful command-line to‑do application built in Python, emphasizing clarity and structure.",
-      tags: ["Python", "CLI", "Data Structures"],
+        "A polished, responsive task management app built with TypeScript and React. Features include task creation, editing, filtering, and a clean, accessible UI.",
+      tags: ["TypeScript", "React", "Vite", "CSS Modules"],
+      link: "/taskmanager",
+    },
+    {
+      title: "Community Program Connector",
+      image: project4,
+      description:
+        "A full backend system designed for public libraries to connect community presenters with patrons. Features include presenter profiles, program proposals, patron requests, scheduling, and registrations — built with SQL, CRUD operations, and scalable data models.",
+      tags: ["FastAPI", "SQL", "CRUD", "Data Modeling", "Backend Architecture"],
+      link: "/communityconnector",
     },
   ];
 
@@ -54,7 +67,9 @@ export default function ProjectsPage() {
               ))}
             </div>
 
-            <button className="project-btn">View More</button>
+            <Link to={project.link} className="project-btn">
+              View More
+            </Link>
           </div>
         ))}
       </div>

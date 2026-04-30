@@ -8,6 +8,10 @@ import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import AboutPage from "./pages/AboutPage";
+import MrFestinPage from "./pages/MrFestinPage";
+import TodoAppPage from "./pages/TodoAppPage";
+import CommunityConnectorPage from "./pages/CommunityConnectorPage";
+import TaskManagerPage from "./pages/TaskManagerPage";
 
 
 function App() {
@@ -33,6 +37,13 @@ function App() {
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/mrfestin" element={<MrFestinPage />} />
+        <Route path="/todoapp" element={<TodoAppPage />} />
+        <Route path="/taskmanager" element={<TaskManagerPage />} />
+        <Route
+          path="/communityconnector"
+          element={<CommunityConnectorPage />}
+        />
       </Routes>
     </BrowserRouter>
   );
