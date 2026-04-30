@@ -83,7 +83,7 @@ export default function AboutPage() {
       {/* Resume Link */}
       <div className="resume-wrapper">
         <a
-          href="/MaryFobbsGuillory_Resume.pdf"
+          href="/resume.pdf"
           className="resume-link"
           target="_blank"
           rel="noopener noreferrer"
