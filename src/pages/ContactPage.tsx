@@ -12,19 +12,21 @@ export default function ContactPage() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
+
+    const googleFormData = new FormData();
+    googleFormData.append("entry.2005620554", formData.get("name") as string);
+    googleFormData.append("entry.1045781291", formData.get("email") as string);
+    googleFormData.append("entry.839337160", formData.get("message") as string);
 
     try {
-      const response = await fetch("/api/submit-contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          "form-name": "contact",
-          ...data,
-        }),
-      });
-
-      if (!response.ok) throw new Error("Network error");
+      await fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLSfcKuay8q3vZnjdcTbR5Mq-Ak2A5P1_rpUXVawp86yJZRSFKg/formResponse",
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: googleFormData,
+        },
+      );
 
       setStatus("success");
       form.reset();
@@ -56,9 +58,6 @@ export default function ContactPage() {
         )}
 
         <form className="contact-form" name="contact" onSubmit={handleSubmit}>
-          <input type="hidden" name="form-name" value="contact" />
-          <input type="hidden" name="bot-field" />
-
           <label>
             Name
             <input type="text" name="name" required />
