@@ -47,6 +47,16 @@ export default function NavBar() {
             About
           </Link>
 
+          <a
+            className="nav-link"
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
+          </a>
+      
+
           <Link
             to="/contact"
             className="nav-link"

@@ -80,18 +80,6 @@ export default function AboutPage() {
         {bios[version]}
       </p>
 
-      {/* Resume Link */}
-      <div className="resume-wrapper">
-        <a
-          href="/resume.pdf"
-          className="resume-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View My Resume
-        </a>
-      </div>
-
       {/* Skills Section */}
       <div className="skills-section">
         <h2>Skills & Tools</h2>
