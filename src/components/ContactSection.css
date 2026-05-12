@@ -1,12 +1,15 @@
 /* Contact section container */
 .contact-section {
   padding: 80px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--accent-bg); 
+  background: var(--accent-bg);
   border-top: 1px solid var(--border);
 }
+
+.contact-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 
 /* Form wrapper */
 .contact-wrapper {
@@ -17,6 +20,7 @@
   max-width: 520px;
   width: 100%;
   box-shadow: var(--shadow);
+  margin: 0 auto;
 }
 
 /* Title */
