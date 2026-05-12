@@ -3,6 +3,7 @@
 import Profile from "../assets/profile.jpg";
 import "./HomePage.css";
 import AboutSection from "../components/AboutSection";
+import ProjectsSection from "../components/ProjectsSection";
 
 export default function HomePage() {
   return (
@@ -30,8 +31,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ABOUT SECTION EMBEDDED ON HOMEPAGE */}
+     
       <AboutSection />
+      <ProjectsSection />
     </>
   );
 }

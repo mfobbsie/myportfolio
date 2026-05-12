@@ -37,13 +37,9 @@ export default function NavBar() {
             Home
           </Link>
 
-          <Link
-            to="/projects"
-            className="nav-link"
-            onClick={() => setOpen(false)}
-          >
+          <a href="#projects" className="nav-link" onClick={() => setOpen(false)}>
             Projects
-          </Link>
+          </a>
 
           <a href="#about" className="nav-link">
             About

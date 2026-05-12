@@ -1,10 +1,8 @@
-/*CommunityConnectorPage.tsx*/
+import "../../components/ProjectsSection.css";
 
-import "./ProjectsPage.css";
-
-export default function CommunityConnectorPage() {
+export default function CommunityConnector() {
   return (
-    <section className="project-page">
+    <div className="project-page">
       <div className="project-content">
         <h1>Community Program Connector</h1>
 
@@ -19,6 +17,6 @@ export default function CommunityConnectorPage() {
           demo videos will be added here.
         </p>
       </div>
-    </section>
+    </div>
   );
 }

@@ -1,16 +1,16 @@
 /*TodoAppPage.tsx*/
 
-import "./ProjectsPage.css";
-import ptd1 from "../assets/ptd1.png";
-import ptd2 from "../assets/ptd2.png";
-import ptd3 from "../assets/ptd3.png";
-import ptd4 from "../assets/ptd4.png";
-import ptd5 from "../assets/ptd5.png";
-import ptd6 from "../assets/ptd6.png";
-import ptd7 from "../assets/ptd7.png";
+import "../../components/ProjectsSection.css";
+import ptd1 from "../../assets/ptd1.png";
+import ptd2 from "../../assets/ptd2.png";
+import ptd3 from "../../assets/ptd3.png";
+import ptd4 from "../../assets/ptd4.png";
+import ptd5 from "../../assets/ptd5.png";
+import ptd6 from "../../assets/ptd6.png";
+import ptd7 from "../../assets/ptd7.png";
 import { useState } from "react";
 
-export default function TodoAppPage() {
+export default function TodoApp() {
   const images = [ptd1, ptd2, ptd3, ptd4, ptd5, ptd6, ptd7];
 
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -31,9 +31,8 @@ export default function TodoAppPage() {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
-
   return (
-    <section className="project-page">
+    <div className="project-page">
       <div className="project-hero">
         <img src={ptd1} alt="Python To-Do App screenshot" />
       </div>
@@ -48,6 +47,16 @@ export default function TodoAppPage() {
           <strong>available time</strong>, and <strong>focus</strong>, then
           recommends tasks that match your current capacity.
         </p>
+
+        <div className="project-links">
+          <a
+            href="https://github.com/mfobbsie/PythonToDoApplication"
+            target="_blank"
+            className="project-link-btn"
+          >
+            GitHub Repository
+          </a>
+        </div>
 
         <h2>Features</h2>
         <ul>
@@ -78,6 +87,7 @@ export default function TodoAppPage() {
             />
           ))}
         </div>
+
         {lightboxOpen && (
           <div className="lightbox-overlay" onClick={closeLightbox}>
             <div
@@ -104,22 +114,12 @@ export default function TodoAppPage() {
           </div>
         )}
 
-        <h2>Links</h2>
-        <p>
-          <a
-            href="https://github.com/mfobbsie/PythonToDoApplication"
-            target="_blank"
-          >
-            GitHub Repository
-          </a>
-        </p>
-
         <h2>What I Learned</h2>
         <p>
           Designing a CLI that feels warm and human, modeling tasks with
           metadata, and writing clean, modular Python code.
         </p>
       </div>
-    </section>
+    </div>
   );
 }

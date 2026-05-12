@@ -1,9 +1,9 @@
-import "./ProjectsPage.css";
-import taskManagerVideo from "../assets/videos/taskmanager.mp4";
+import "../../components/ProjectsSection.css";
+import taskManagerVideo from "../../assets/videos/taskmanager.mp4";
 
-export default function TaskManagerPage() {
+export default function TaskManager() {
   return (
-    <section className="project-page">
+    <div className="project-page">
       <div className="project-hero">
         <video className="project-video" controls>
           <source src={taskManagerVideo} type="video/mp4" />
@@ -18,6 +18,24 @@ export default function TaskManagerPage() {
           React. This version focuses on clean UI, accessibility, and a
           structured component architecture that scales.
         </p>
+
+        <div className="project-links">
+          <a
+            href="https://github.com/mfobbsie/TypescriptTaskManagement"
+            target="_blank"
+            className="project-link-btn"
+          >
+            GitHub Repository
+          </a>
+
+          <a
+            href="https://taskmanagementupdated.vercel.app/"
+            target="_blank"
+            className="project-link-btn primary"
+          >
+            Live Demo
+          </a>
+        </div>
 
         <h2>Features</h2>
         <ul>
@@ -37,27 +55,14 @@ export default function TaskManagerPage() {
           <li>Vercel Deployment</li>
         </ul>
 
-        <h2>Links</h2>
-        <p>
-          <a
-            href="https://github.com/mfobbsie/TypescriptTaskManagement"
-            target="_blank"
-          >
-            GitHub Repository
-          </a>
-        </p>
-        <p>
-          <a href="https://taskmanagementupdated.vercel.app/" target="_blank">
-            Live Demo
-          </a>
-        </p>
-
         <h2>What I Learned</h2>
         <p>
-          That sometimes the best thing for your project is to start over when it outgrows its initial scope. Building a scalable component structure, refining UI accessibility,
-          and using TypeScript to create safer, more predictable code.
+          That sometimes the best thing for your project is to start over when
+          it outgrows its initial scope. Building a scalable component
+          structure, refining UI accessibility, and using TypeScript to create
+          safer, more predictable code.
         </p>
       </div>
-    </section>
+    </div>
   );
 }

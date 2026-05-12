@@ -1,11 +1,11 @@
 /*MrFestinPage.tsx*/
 
-import "../pages/ProjectsPage.css";
-import festinVideo from "../assets/videos/mrfestin.mp4";
+import festinVideo from "../../assets/videos/mrfestin.mp4";
+import "../../components/ProjectsSection.css";
 
-export default function MrFestinPage() {
+export default function MrFestin() {
   return (
-    <section className="project-page">
+    <div className="project-page">
       <div className="project-hero">
         <video className="project-video" controls>
           <source src={festinVideo} type="video/mp4" />
@@ -19,9 +19,27 @@ export default function MrFestinPage() {
           A custom-built artist website designed for Bay Area artist{" "}
           <strong>mr. festin</strong>, blending a neon-editorial aesthetic with
           responsive layouts, dynamic galleries, and a playful, immersive brand
-          experience. This project showcases my ability to translate a creative
-          vision into a fully realized digital identity.
+          experience.
         </p>
+
+        {/* ⭐ NEW: Prominent links section */}
+        <div className="project-links">
+          <a
+            href="https://github.com/mfobbsie/mrfestinwebsite"
+            target="_blank"
+            className="project-link-btn"
+          >
+            GitHub Repository
+          </a>
+
+          <a
+            href="https://mrfestinwebsite.vercel.app"
+            target="_blank"
+            className="project-link-btn primary"
+          >
+            Live Demo
+          </a>
+        </div>
 
         <h2>Features</h2>
         <ul>
@@ -41,18 +59,6 @@ export default function MrFestinPage() {
           <li>Vercel Deployment</li>
         </ul>
 
-        <h2>Links</h2>
-        <p>
-          <a href="https://github.com/mfobbsie/mrfestinwebsite" target="_blank">
-            GitHub Repository
-          </a>
-        </p>
-        <p>
-          <a href="https://mrfestinwebsite.vercel.app" target="_blank">
-            Live Demo
-          </a>
-        </p>
-
         <h2>What I Learned</h2>
         <p>
           How to translate an artist’s brand into a cohesive digital experience,
@@ -60,6 +66,6 @@ export default function MrFestinPage() {
           navigation experience with smooth transitions.
         </p>
       </div>
-    </section>
+    </div>
   );
 }

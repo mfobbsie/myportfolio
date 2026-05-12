@@ -5,13 +5,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage";
-import ContactPage from "./pages/ContactPage";
-import ProjectsPage from "./pages/ProjectsPage";
+import ContactPage from "./components/ContactPage";
+import ProjectsPage from "./components/ProjectsSection";
 import AboutPage from "./components/AboutSection";
-import MrFestinPage from "./pages/MrFestinPage";
-import TodoAppPage from "./pages/TodoAppPage";
-import CommunityConnectorPage from "./pages/CommunityConnectorPage";
-import TaskManagerPage from "./pages/TaskManagerPage";
+import MrFestinPage from "./components/projects/MrFestin";
+import TodoAppPage from "./components/projects/TodoApp";
+import CommunityConnectorPage from "./components/projects/CommunityConnector";
+import TaskManagerPage from "./components/projects/TaskManager";
 
 
 function App() {
