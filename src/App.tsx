@@ -7,7 +7,7 @@ import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
 import ProjectsPage from "./pages/ProjectsPage";
-import AboutPage from "./pages/AboutPage";
+import AboutPage from "./components/AboutSection";
 import MrFestinPage from "./pages/MrFestinPage";
 import TodoAppPage from "./pages/TodoAppPage";
 import CommunityConnectorPage from "./pages/CommunityConnectorPage";

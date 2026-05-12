@@ -14,9 +14,11 @@ export default function NavBar() {
         {/* Brand */}
         <div className="nav-brand">
           <img src={favicon} alt="dragonfly favicon" className="nav-icon" />
-          <Link to="/" className="nav-logo" onClick={() => setOpen(false)}>
-            mary fobbs‑guillory
-          </Link>
+          <Link
+            to="/"
+            className="nav-logo"
+            onClick={() => setOpen(false)}
+          ></Link>
         </div>
 
         {/* Hamburger */}
@@ -43,19 +45,18 @@ export default function NavBar() {
             Projects
           </Link>
 
-          <Link to="/about" className="nav-link" onClick={() => setOpen(false)}>
+          <a href="#about" className="nav-link">
             About
-          </Link>
+          </a>
 
           <a
-            className="nav-link"
             href="/resume.pdf"
+            className="nav-link"
             target="_blank"
             rel="noopener noreferrer"
           >
             Resume
           </a>
-      
 
           <Link
             to="/contact"
