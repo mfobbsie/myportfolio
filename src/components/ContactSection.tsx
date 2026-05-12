@@ -1,10 +1,9 @@
-/* ContactPage.tsx */
+/* ContactSection.tsx */
 
 import { useState } from "react";
-import "./ContactPage.css";
-import BgImage from "../assets/contactform.avif";
+import "../components/ContactSection.css";
 
-export default function ContactPage() {
+export default function ContactSection() {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -37,13 +36,10 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="contact-page">
-      <div className="contact-bg">
-        <img src={BgImage} alt="Soft desert texture background" />
-      </div>
-
-      <div className="contact-wrapper">
-        <h1>Contact Me</h1>
+    <section className="section contact-section" id="contact">
+      <div className="container"></div>
+        <div className="contact-wrapper">
+          <h1>Contact Me</h1>
 
         {status === "success" && (
           <p className="contact-success">
@@ -57,7 +53,7 @@ export default function ContactPage() {
           </p>
         )}
 
-        <form className="contact-form" name="contact" onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit}>
           <label>
             Name
             <input type="text" name="name" required />

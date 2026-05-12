@@ -33,16 +33,16 @@ export default function NavBar() {
 
         {/* Links */}
         <div className={`nav-links ${open ? "nav-links-open" : ""}`}>
-          <Link to="/" className="nav-link" onClick={() => setOpen(false)}>
-            Home
-          </Link>
-
-          <a href="#projects" className="nav-link" onClick={() => setOpen(false)}>
-            Projects
-          </a>
-
           <a href="#about" className="nav-link">
             About
+          </a>
+
+          <a
+            href="#projects"
+            className="nav-link"
+            onClick={() => setOpen(false)}
+          >
+            Projects
           </a>
 
           <a
@@ -54,13 +54,13 @@ export default function NavBar() {
             Resume
           </a>
 
-          <Link
-            to="/contact"
+          <a
+            href="#contact"
             className="nav-link"
             onClick={() => setOpen(false)}
           >
             Contact
-          </Link>
+          </a>
         </div>
       </div>
     </nav>

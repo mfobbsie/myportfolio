@@ -49,7 +49,8 @@ export default function AboutSection() {
   };
 
   return (
-    <section id="about" className="about-section">
+    <section id="about" className="section about-section">
+      <div className="container">
       <h1>About Me</h1>
       <p className="about-text">{bio}</p>
 
@@ -69,6 +70,7 @@ export default function AboutSection() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

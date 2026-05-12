@@ -4,6 +4,7 @@ import Profile from "../assets/profile.jpg";
 import "./HomePage.css";
 import AboutSection from "../components/AboutSection";
 import ProjectsSection from "../components/ProjectsSection";
+import ContactSection from "../components/ContactSection";
 
 export default function HomePage() {
   return (
@@ -34,6 +35,7 @@ export default function HomePage() {
      
       <AboutSection />
       <ProjectsSection />
+      <ContactSection />
     </>
   );
 }

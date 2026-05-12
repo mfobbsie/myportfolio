@@ -50,6 +50,7 @@ h2 {
 h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
+  line-height: 1.15;
   margin: 32px 0;
   @media (max-width: 1024px) {
     font-size: 36px;
@@ -57,7 +58,7 @@ h1 {
   }
 }
 h2 {
-  font-size: 24px;
+  font-size: 35px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
@@ -69,21 +70,120 @@ p {
   margin: 0;
 }
 
+/* Floating theme toggle button */
 .theme-toggle {
-  background: var(--accent-bg);
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   border: 1px solid var(--border);
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-family: var(--sans);
+  background: var(--accent-bg);
   color: var(--text);
-  transition: background 0.2s ease;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+  z-index: 9999;
+  opacity: 0.9;
 }
 
 .theme-toggle:hover {
   background: var(--accent);
   color: var(--bg);
+  transform: translateY(-2px);
+  opacity: 1;
 }
+/* Floating scroll-to-top button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 90px; /* sits above the theme toggle */
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--accent-bg);
+  color: var(--text);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+  z-index: 9999;
+  opacity: 0.9;
+}
+
+.scroll-top-btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: translateY(-2px);
+  opacity: 1;
+}
+/* Base section styling */
+.section {
+  padding: 80px 20px;
+  transition: background 0.3s ease;
+}
+
+/* Alternating background washes */
+.about-section {
+  background: var(--accent-bg);
+}
+
+.projects-section {
+  background: var(--bg);
+}
+
+.contact-section {
+  background: var(--accent-bg);
+}
+.section + .section {
+  border-top: 1px solid var(--border);
+}
+.container {
+  max-width: 1200px; /* sweet spot for big screens */
+  margin: 0 auto;
+  padding: 0 24px;
+}
+@media (min-width: 1600px) {
+  .section {
+    padding: 120px 0; /* more breathing room */
+  }
+
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 2000px) {
+  .projects-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1800px) {
+  body {
+    background: linear-gradient(
+      to bottom,
+      var(--bg),
+      var(--accent-bg) 20%,
+      var(--bg) 40%,
+      var(--accent-bg) 60%,
+      var(--bg) 80%
+    );
+  }
+}
+
 
 
 

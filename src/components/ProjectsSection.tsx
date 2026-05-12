@@ -12,7 +12,8 @@ export default function ProjectsSection() {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="projects-section">
+    <section id="projects" className="section projects-section">
+      <div className="container">
       <h1>Projects</h1>
 
       <div className="projects-grid">
@@ -48,6 +49,7 @@ export default function ProjectsSection() {
         project={activeProject}
         onClose={() => setActiveProject(null)}
       />
+      </div>
     </section>
   );
 }
